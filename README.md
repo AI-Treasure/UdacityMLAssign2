@@ -20,7 +20,7 @@ In this project, we will follow the steps below:
 
 ![](steps.png)
 
-1. **Authentication** : With the Azure machine learning extension, one can create a Service Principal (SP) account, needed for the authentication.
+1. **Authentication** : With the Azure machine learning extension, one can create a Service Principal account, needed for the authentication.
 2. **Automated ML Experiment** : Here, we will use AutoML to create a best fit model.
 3. **Deploy the best model** : The model with the highest accuracy, will be deployed here so that it can be used with API.
 4. **Enable logging** : Here we install Application Insights, which is used for logging.
@@ -34,10 +34,21 @@ In this project, we will follow the steps below:
 This step was skipped, since I used the Lab provided by Udacity.
 
 ### Automated ML Experiment
-First, the data set [Bank Marketing data](https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv) was loaded. Subsequently, Azure's AutoML was used to make a model.
+First, the data set [Bank Marketing data](https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv) was loaded as can be seen below:
 
-*Figure 1: Bank Marketing Dataset*
-![Bank Marketing Dataset](images/Dataset.png)
-I uploaded this dataset into Azure ML Studio in the *Registered Dataset* Section using the url provided in the project.
+![](sample_screenshots/dataset.GIF)
+![](sample_screenshots/dataset2.GIF)
+
+
+
+Subsequently, Azure's AutoML was used to make a model. 
+
+AutoML has ran several runs, and using the accuracy, selected the best performing mode, which was an VotingEnsemble.
+
+
+
+After
+
+
 
 
