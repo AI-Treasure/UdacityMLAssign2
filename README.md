@@ -11,6 +11,7 @@
     * [Consume model endpoints](#consume-model-endpoints)
     * [Create and publish a pipeline](#create-and-publish-a-pipeline)
 * [How to improve](#how-to-improve)
+* [Screencast video](#screencast-video)
 
 ## Project Overview
 This is the second project of the course Machine Learning Engineer with Microsoft Azure. In this project, we use Azure to configure a cloud-based machine learning production model, deploy it, and consume it. In the second part of this project, we will also create, publish, and consume a pipeline.
@@ -101,9 +102,9 @@ Below are the created endpoints:
 
 There are many different ways in which this project can be improved. For instance, we can compare the models a bit more in detail. So that we can improve on the accuracy. Also can we inspect the data a bit more in detail, to see whether further cleaning needs to be done. Furthermore, one could add in the SDK the option to add datapoints to the dataset, before building the model. This would make the whol workflow even more dynamic. So there is enough to be done. :-)
 
+## Screencast video
 
-
-
+I was not allowed (by my boss) to place my screencast video on youtube, and therefore I placed it in my github environment.
 
 
 
