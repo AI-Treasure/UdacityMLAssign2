@@ -39,11 +39,15 @@ First, the data set [Bank Marketing data](https://automlsamplenotebookdata.blob.
 ![](sample_screenshots/dataset.GIF)
 ![](sample_screenshots/dataset2.GIF)
 
-
-
 Subsequently, Azure's AutoML was used to make a model. 
 
+![](sample_screenshots/automl1.GIF)
+![](sample_screenshots/automl2.GIF)
+
 AutoML has ran several runs, and using the accuracy, selected the best performing mode, which was an VotingEnsemble.
+
+![](sample_screenshots/automl3.GIF)
+![](sample_screenshots/automl4.GIF)
 
 
 
