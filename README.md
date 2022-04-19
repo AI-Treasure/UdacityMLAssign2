@@ -10,11 +10,10 @@
     * [Swagger Documentation](#swagger-documentation)
     * [Consume model endpoints](#consume-model-endpoints)
     * [Create and publish a pipeline](#create-and-publish-a-pipeline)
-* [Screen Recordin](#screen-recording)
-* [Standout Suggestions](#standout-suggestions)
+* [How to improve](#how-to-improve)
 
 ## Project Overview
-This is the second project ofthe course Machine Learning Engineer with Microsoft Azure. In this project, we use Azure to configure a cloud-based machine learning production model, deploy it, and consume it. In the second part of this project, we will also create, publish, and consume a pipeline.
+This is the second project of the course Machine Learning Engineer with Microsoft Azure. In this project, we use Azure to configure a cloud-based machine learning production model, deploy it, and consume it. In the second part of this project, we will also create, publish, and consume a pipeline.
 
 In this project, we will follow the steps below:
 
@@ -69,15 +68,14 @@ The output of the command was subsequently:
 ### Swagger Documentation
 To get the best documentation of the API, we wanted to use Swagger. This is done by first downloading the swagger.json file which contains the information of our created endpoints. 
 
-Subsequently, we need to run the swagger.sh and the serve.py files to let swagger create the documentation of the API. Note though that I did not entirely manage to do this. As you can see in the below screenshot, I did manage to get the generic swagger file on. But when running the serve.py file, the file froze and the swagger file did not update anymore. I expect this to be because of the por settings that were not correctlys set. I did not have any time to solve this, so I continued the excercise.
-
+Subsequently, we need to run the swagger.sh and the serve.py files to let swagger create the documentation of the API. Note though that I did not entirely manage to do this. As you can see in the below screenshot, I did manage to get the generic swagger file on. But when running the serve.py file, the file froze and the swagger file did not update anymore. I expect this to be because of incorrect port settings (I have subsequentally tried port 8000, 9000 and 10000). I did not have any time to solve this, so I continued with the excercise.
 
 ![](sample_screenshots/logs2.GIF)
 ![](sample_screenshots/logs3.GIF)
 
 ### Consume model endpoints
 
-Finally, we wanted to interact with the endpoint and give it two datapoints to test it. This was done in the file enspoint.py, which contained the information of the two datapoint. When I ran the python code, it gave me an error. Upon asking, it turned out that there is an error in the Microsoft code, which does not allow the data points to be given in a different order than is given in the dataset from the csv file. But I only found out after  my session had ended and I could not implement this anymore. The file that I used is in the repository to check.
+Finally, we wanted to interact with the endpoint and give it two datapoints to test it. This was done in the file endpoint.py, which contained the information of the two datapoint. When I ran the python code, it gave me an error. Upon asking, it turned out that there is an error in the Microsoft code, which does not allow the data points to be given in a different order than is given in the dataset from the csv file. But I only found out after  my session had ended and I could not implement this anymore. The file that I used is in the repository to check.
 
 ![](sample_screenshots/endpoint.GIF)
 
@@ -91,8 +89,6 @@ In the last step the above process was created using a Pipeline. So the best mod
 ![](sample_screenshots/PipelineStudio3.GIF)
 ![](sample_screenshots/PipelineStudio2.GIF)
 
-![](sample_screenshots/PipelineRunoverview2.GIF)
-
 ![](sample_screenshots/PublishedPipeline.GIF)
 ![](sample_screenshots/PublishedPipeline2.GIF)
 
@@ -101,7 +97,9 @@ Below are the created endpoints:
 ![](sample_screenshots/PipelineEndpoint2.GIF)
 
 
+## How to improve    
 
+There are many different ways in which this project can be improved. For instance, we can compare the models a bit more in detail. So that we can improve on the accuracy. Also can we inspect the data a bit more in detail, to see whether further cleaning needs to be done. Furthermore, one could add in the SDK the option to add datapoints to the dataset, before building the model. This would make the whol workflow even more dynamic. So there is enough to be done. :-)
 
 
 
