@@ -1,1 +1,43 @@
+# Project 2: Operationalizing Machine Learning
+
+## Table of Content
+* [Project Overview](#project-overview)
+* [Key Steps](#architectural-diagram)
+    * [Authentication](#authentication)
+    * [Automated ML Experiment](#automated-ml-experiment)
+    * [Deploy the best model](#deploy-the-best-model)
+    * [Enable logging](#enable-logging)
+    * [Swagger Documentation](#swagger-documentation)
+    * [Consume model endpoints](#consume-model-endpoints)
+    * [Create and publish a pipeline](#create-and-publish-a-pipeline)
+* [Screen Recordin](#screen-recording)
+* [Standout Suggestions](#standout-suggestions)
+
+## Project Overview
+This is the second project ofthe course Machine Learning Engineer with Microsoft Azure. In this project, we use Azure to configure a cloud-based machine learning production model, deploy it, and consume it. In the second part of this project, we will also create, publish, and consume a pipeline.
+
+In this project, we will follow the steps below:
+
+![](steps.png)
+
+1. **Authentication** : With the Azure machine learning extension, one can create a Service Principal (SP) account, needed for the authentication.
+2. **Automated ML Experiment** : Here, we will use AutoML to create a best fit model.
+3. **Deploy the best model** : The model with the highest accuracy, will be deployed here so that it can be used with API.
+4. **Enable logging** : Here we install Application Insights, which is used for logging.
+5. **Swagger Documentation** : Swagger will be used to create the documentation for the deployed model.
+6. **Consume model endpoints** : Here the endpoint model will be tested to get some predictions for 2 data points.
+7. **Create and publish a pipeline** : In the final step, the above is created using a pipeline with the Python SDK.
+
+## Steps
+
+### Authentication
+This step was skipped, since I used the Lab provided by Udacity.
+
+### Automated ML Experiment
+First, the data set [Bank Marketing data](https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv) was loaded. Subsequently, Azure's AutoML was used to make a model.
+
+*Figure 1: Bank Marketing Dataset*
+![Bank Marketing Dataset](images/Dataset.png)
+I uploaded this dataset into Azure ML Studio in the *Registered Dataset* Section using the url provided in the project.
+
 
