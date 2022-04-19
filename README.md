@@ -2,7 +2,7 @@
 
 ## Table of Content
 * [Project Overview](#project-overview)
-* [Key Steps](#architectural-diagram)
+* [Steps](#architectural-diagram)
     * [Authentication](#authentication)
     * [Automated ML Experiment](#automated-ml-experiment)
     * [Deploy the best model](#deploy-the-best-model)
