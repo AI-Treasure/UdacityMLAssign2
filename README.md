@@ -12,6 +12,7 @@
     * [Create and publish a pipeline](#create-and-publish-a-pipeline)
 * [How to improve](#how-to-improve)
 * [Screencast video](#screencast-video)
+* [Used notebook](#used-notebook)
 
 ## Project Overview
 This is the second project of the course Machine Learning Engineer with Microsoft Azure. In this project, we use Azure to configure a cloud-based machine learning production model, deploy it, and consume it. In the second part of this project, we will also create, publish, and consume a pipeline.
@@ -107,4 +108,7 @@ There are many different ways in which this project can be improved. For instanc
 I was not allowed (by my boss) to place my screencast video on youtube, and therefore I placed it in my github environment.
 
 
+## Used notebook  
+
+The notebook that I used for the pipelines can be found in my github repository.
 
