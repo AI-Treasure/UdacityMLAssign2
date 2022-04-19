@@ -51,9 +51,18 @@ AutoML has ran several runs, and using the accuracy, selected the best performin
 
 The voting ensemble had an accuracy of around 95% and was subsequently used for the deployment. 
 
+### Deploy the best model
+In this step we will deploy the model with highest accuracy that was found in the previous step. This will be done using the Azure Container Instance, where we use Enable Authentication.
 
 ![](sample_screenshots/deployment1.GIF)
 ![](sample_screenshots/deployment2.GIF)
+
+### Enable logging
+Enabling Application Insights and Logs could have been done at the time of deployment, but for this project we achieved it using Azure Python SDK.
+
+
+
+
 
 
 
