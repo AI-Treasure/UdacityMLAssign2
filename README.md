@@ -58,11 +58,21 @@ In this step we will deploy the model with highest accuracy that was found in th
 ![](sample_screenshots/deployment2.GIF)
 
 ### Enable logging
-In this step we enable Microsoft Application Insight which makes it possible to retrieve logs. This is done using a Python SDK and running the file logs.py.
+In this step we enable Microsoft Application Insight which makes it possible to retrieve logs. This is done using a Python SDK and running the file logs.py, and adding a line "service.update(enable_app_insights=True)" to enable the Application Insight.
 
-![](sample_screenshots/deployment1.GIF)
-![](sample_screenshots/deployment2.GIF)
+![](sample_screenshots/deployment3AI.GIF)
 
+The output of the command was subsequently:
+
+![](sample_screenshots/logs1.GIF)
+
+### Swagger Documentation
+To get the best documentation of the API, we wanted to use Swagger. This is done by first downloading the swagger.json file which contains the information of our created endpoints. 
+
+Subsequently, we need to run the swagger.sh and the serve.py files to let swagger create the documentation of the API. Note though that I did not entirely manage to do this. As you can see in the below screenshot, I did manage to get the generic swagger file on. But when running the serve.py file, the file froze and the swagger file did not update anymore. I expect this to be because of the por settings that were not correctlys set. I did not have any time to solve this, so I continued the excercise.
+
+
+![](sample_screenshots/logs2.GIF)
 
 
 Enabling Application Insights and Logs could have been done at the time of deployment, but for this project we achieved it using Azure Python SDK.
