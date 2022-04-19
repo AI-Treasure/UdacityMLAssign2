@@ -73,9 +73,33 @@ Subsequently, we need to run the swagger.sh and the serve.py files to let swagge
 
 
 ![](sample_screenshots/logs2.GIF)
+![](sample_screenshots/logs3.GIF)
+
+### Consume model endpoints
+
+Finally, we wanted to interact with the endpoint and give it two datapoints to test it. This was done in the file enspoint.py, which contained the information of the two datapoint. When I ran the python code, it gave me an error. Upon asking, it turned out that there is an error in the Microsoft code, which does not allow the data points to be given in a different order than is given in the dataset from the csv file. But I only found out after  my session had ended and I could not implement this anymore. The file that I used is in the repository to check.
+
+![](sample_screenshots/endpoint.GIF)
+
+### Create and publish a pipeline
+In the last step the above process was created using a Pipeline. So the best model for the given dataset was created, consumed and published using AutoML with Python SDK.
 
 
-Enabling Application Insights and Logs could have been done at the time of deployment, but for this project we achieved it using Azure Python SDK.
+![](sample_screenshots/PipelineSDK1.GIF)
+![](sample_screenshots/PipelineSDK2.GIF)
+
+![](sample_screenshots/PipelineStudio3.GIF)
+![](sample_screenshots/PipelineStudio2.GIF)
+
+![](sample_screenshots/PipelineRunoverview2.GIF)
+
+![](sample_screenshots/PublishedPipeline.GIF)
+![](sample_screenshots/PublishedPipeline2.GIF)
+
+Below are the created endpoints:
+![](sample_screenshots/PipelineEndpoint.GIF)
+![](sample_screenshots/PipelineEndpoint2.GIF)
+
 
 
 
