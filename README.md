@@ -58,6 +58,13 @@ In this step we will deploy the model with highest accuracy that was found in th
 ![](sample_screenshots/deployment2.GIF)
 
 ### Enable logging
+In this step we enable Microsoft Application Insight which makes it possible to retrieve logs. This is done using a Python SDK and running the file logs.py.
+
+![](sample_screenshots/deployment1.GIF)
+![](sample_screenshots/deployment2.GIF)
+
+
+
 Enabling Application Insights and Logs could have been done at the time of deployment, but for this project we achieved it using Azure Python SDK.
 
 
