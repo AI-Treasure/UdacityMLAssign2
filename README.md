@@ -49,9 +49,12 @@ AutoML has ran several runs, and using the accuracy, selected the best performin
 ![](sample_screenshots/automl3.GIF)
 ![](sample_screenshots/automl4.GIF)
 
+The voting ensemble had an accuracy of around 95% and was subsequently used for the deployment. 
 
 
-After
+![](sample_screenshots/deployment1.GIF)
+![](sample_screenshots/deployment2.GIF)
+
 
 
 
