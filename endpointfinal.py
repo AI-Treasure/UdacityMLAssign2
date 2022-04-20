@@ -1,15 +1,17 @@
-import requests
+import urllib.request
 import json
-
-# URL for the web service, should be similar to:
-# 'http://8530a665-66f3-49c8-a953-b82a2d312917.eastus.azurecontainer.io/score'
-scoring_uri = 'http://d8131649-149d-4a94-88d1-000024f32a51.southcentralus.azurecontainer.io/score'
-# If the service is authenticated, set the key or token
-key = 'gJaAltgcXjbyTpEDNsFd5Q1QFMXQMaQF'
-
-# Two sets of data to score, so we get two results back
-data = {"data":
-        [
+import os
+import ssl
+def allowSelfSignedHttps(allowed):
+    # bypass the server certificate verification on client side
+    if allowed and not os.environ.get('PYTHONHTTPSVERIFY', '') and getattr(ssl, '_create_unverified_context', None):
+        ssl._create_default_https_context = ssl._create_unverified_context
+allowSelfSignedHttps(True) # this line is needed if you use self-signed certificate in your scoring service.
+# Request data goes here
+data = {
+    "Inputs": {
+        "data":
+               [
           {
             "age": 17,
             "campaign": 1,
@@ -55,17 +57,27 @@ data = {"data":
             "previous": 1
           },
       ]
+    },
+    "GlobalParameters": {
+        "method": "predict"
     }
-# Convert to JSON string
-input_data = json.dumps(data)
-with open("data.json", "w") as _f:
-    _f.write(input_data)
+}
+body = str.encode(json.dumps(data))
+url = 'http://5455ba61-e27d-4057-91c8-7e2b6d3adc4f.southcentralus.azurecontainer.io/score'  # Replace this 
+api_key = '1DUPoEjfEZXUUsbn5l7HPa9uqgF99lXy' # Replace this with the API key for the web service
+headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
+req = urllib.request.Request(url, body, headers)
+try:
+    response = urllib.request.urlopen(req)
+    result = response.read()
+    print(result)
+except urllib.error.HTTPError as error:
+    print("The request failed with status code: " + str(error.code))
+    # Print the headers - they include the requert ID and the timestamp, which are useful for debugging the failure
+    print(error.info())
+    print(error.read().decode("utf8", 'ignore'))
+        
+        
+        
+        
 
-# Set the content type
-headers = {'Content-Type': 'application/json'}
-# If authentication is enabled, set the authorization header
-headers['Authorization'] = f'Bearer {key}'
-
-# Make the request and display the response
-resp = requests.post(scoring_uri, input_data, headers=headers)
-print(resp.json())
