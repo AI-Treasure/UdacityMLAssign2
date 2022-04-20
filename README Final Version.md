@@ -37,16 +37,23 @@ This step was skipped, since I used the Lab provided by Udacity.
 ### Automated ML Experiment
 First, the data set [Bank Marketing data](https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv) was loaded as can be seen below:
 
-![](sample_screenshots/dataset.GIF)
-![](sample_screenshots/dataset2.GIF)
+![](Assign2/dataset1.GIF)
+![](Assign2/dataset2.GIF)
+![](Assign2/dataset3-profile.GIF)
+![](Assign2/dataset4-registereddataset.GIF)
 
 Subsequently, Azure's AutoML was used to make a model. 
 
-![](sample_screenshots/automl1.GIF)
-![](sample_screenshots/automl2.GIF)
+![](Assign2/automl1.GIF)
+![](Assign2/automl2.GIF)
+![](Assign2/automl3.GIF)
+![](Assign2/automl4.GIF)
+![](Assign2/automl5.GIF)
+![](Assign2/automl6.GIF)
+
 
 AutoML has ran several runs, and using the accuracy, selected the best performing mode, which was an VotingEnsemble.
-
+Vervang nog de plaatjes hieronder
 ![](sample_screenshots/automl3.GIF)
 ![](sample_screenshots/automl4.GIF)
 
@@ -55,25 +62,30 @@ The voting ensemble had an accuracy of around 95% and was subsequently used for 
 ### Deploy the best model
 In this step we will deploy the model with highest accuracy that was found in the previous step. This will be done using the Azure Container Instance, where we use Enable Authentication.
 
-![](sample_screenshots/deployment1.GIF)
-![](sample_screenshots/deployment2.GIF)
+![](Assign2/deploy1.GIF)
+![](Assign2/deploy2.GIF)
+![](Assign2/deploy3.GIF)
+
+![](Assign2/endpoint.GIF)
 
 ### Enable logging
 In this step we enable Microsoft Application Insight which makes it possible to retrieve logs. This is done using a Python SDK and running the file logs.py, and adding a line "service.update(enable_app_insights=True)" to enable the Application Insight.
 
-![](sample_screenshots/deployment3AI.GIF)
+![](Assign2/deploy4-withoutAI.GIF)
+![](Assign2/deploy5-withAI.GIF)
 
 The output of the command was subsequently:
 
-![](sample_screenshots/logs1.GIF)
+![](Assign2/logs1.GIF)
 
 ### Swagger Documentation
 To get the best documentation of the API, we wanted to use Swagger. This is done by first downloading the swagger.json file which contains the information of our created endpoints. 
 
 Subsequently, we need to run the swagger.sh and the serve.py files to let swagger create the documentation of the API. Note though that I did not entirely manage to do this. As you can see in the below screenshot, I did manage to get the generic swagger file on. But when running the serve.py file, the file froze and the swagger file did not update anymore. I expect this to be because of incorrect port settings (I have subsequentally tried port 8000, 9000 and 10000). I did not have any time to solve this, so I continued with the excercise.
 
-![](sample_screenshots/logs2.GIF)
-![](sample_screenshots/logs3.GIF)
+![](Assign2/logs1.GIF)
+![](Assign2/logs2.GIF)
+
 
 ### Consume model endpoints
 
