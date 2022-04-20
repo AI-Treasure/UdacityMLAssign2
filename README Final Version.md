@@ -84,13 +84,14 @@ Subsequently, we need to run the swagger.sh and the serve.py files to let swagge
 
 ### Consume model endpoints
 
-Finally, we wanted to interact with the endpoint and give it two datapoints to test it. This was done in the file endpoint.py, which contained the information of the two datapoint. When I ran the python code, it gave me an error. (See below) I have spend the whole day, together with 2 mentors to solve this. But they could also not find the error.
+Finally, we wanted to interact with the endpoint and give it two datapoints to test it. This was done in the file endpoint.py, which contained the information of the two datapoint. When I ran the python code, it gave me an error. (See below) I have spend the whole day, together with 2 mentors to solve this. But they could also not find the error. They also think it has to do with a bug with regards to Json file.
 
-Upon asking, it turned out that there is an error in the Microsoft code, which does not allow the data points to be given in a different order than is given in the dataset from the csv file. But I only found out after  my session had ended and I could not implement this anymore. The file that I used is in the repository to check.
+They suggested to instead show the test results of the deployed model in ML Studio (See screenshot below).
 
+![](Assign2/error1.GIF)
+![](Assign2/mentor4.GIF)
 ![](Assign2/mentor1.GIF)
-![](Assign2/mentor2.GIF)
-![](Assign2/mentor3.GIF)
+
 
 ### Create and publish a pipeline
 In the last step the above process was created using a Pipeline. So the best model for the given dataset was created, consumed and published using AutoML with Python SDK.
