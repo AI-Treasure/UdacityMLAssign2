@@ -94,7 +94,7 @@ They suggested to instead show the test results of the deployed model in ML Stud
 
 
 ### Create and publish a pipeline
-In the last step the above process was created using a Pipeline. So the best model for the given dataset was created, consumed and published using AutoML with Python SDK.
+In the last step the above process was created using a Pipeline. So the best model for the given dataset was created, consumed and published using AutoML with Python SDK. The notebook can be found here: https://github.com/AI-Treasure/UdacityMLAssign2/blob/master/aml-exercise-pipelines-with-automated-machine-learning-step%20FINAL.ipynb
 
 
 ![](sample_screenshots/PipelineSDK1.GIF)
